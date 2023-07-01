@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        nota     = prompt('digite a nota do aluno : ')
+        presenca = prompt('digite a % de presença do aluno: ')
+
+        console.log(nota)
+        if      (nota == 10)             { alert('Referente a sua nova : PIC..DA GALAXIA, FOD.., CDB            ') }
+        else if (nota > 10)              { alert('Referente a sua nota : MENTIROSO, MAIOR NOTA É 10             ') }
+        else if (nota >= 8 && nota < 10) { alert('Referente a sua nota : PASSOU DE ANO                          ') }
+        else if (nota >= 5 && nota <  8) { alert('Referente a sua nota : PASSOU RASPANDO, VAI PARA A RECUPERAÇÃO') }
+        else                             { alert('Referente a sua nota : BURRO, REPROVOU                        ') }
+
+// Operadores de condição
+// && siginifica E , os 2 lados tem que ser verdadeiros
+// || siginifica OU, pelo menos uma condição tem que ser verdadeira
+
+        if      (nota > 8 && presenca >= 70)              { alert ( 'APROVADO   nota: ' + nota + " presença:" + presenca + " %")}
+        else if (nota >= 5 && nota < 8 && presenca >= 70) { alert ( 'RECUPERCAO nota: ' + nota + " presença:" + presenca + " %")}
+        else                                              { alert ( 'REPROVADO  nota: ' + nota + " presença:" + presenca + " %")}
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+1 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="valor1">Valor 1</label>
+    <input type="text" id="valor1">
+
+    <label for="valor2">Valor 2</label>
+    <input type="text" id="valor2">
+    
+    <label for="resultado">Resultado</label>
+    <input type="text" id="resultado" disabled>
+
+    <br><br>
+     
+    <button onclick="SomaDoisNumeros()"     >Exercicio 1</button>
+    <button onclick="ImparPar()"            >Exercicio 2</button>
+    <button onclick="MaiorNumeroEntreDois()">Exercicio 3</button>
+    <button onclick="Fibonacci()"           >Exercicio 8</button>
+    <button onclick="SomaPares()"           >Exercicio 11</button>
+    <button onclick="Tabuada()"             >Tabuada</button>
+    <button onclick="Tabuada1()"             >Tabuada</button>
+    
+</body>
+<script>
+    function Tabuada() {
+        valor1 = document.getElementById("valor1").value
+        for (let i = 1 , i <= 10; i++){   //i é um contador
+    //  for (let i = 1 , i <= 10; i+= 1){   //i é um contador  mesma coisa
+            console.log(contador)
+        
+
+
+        }
+    }
+
+ 
+    function Tabuada1() {
+        contador = 1 
+        while (contador < 11) 
+        {
+            contador ++
+        }
+
+
+        }
+    
+
+
+    function SomaDoisNumeros()
+    {
+        //1.Crie uma função que receba dois numeros como parametros e retorne a soma deles
+        valor1 = parseInt(prompt("digite o valor 1"))
+        valor2 = parseInt(prompt("Digite o valor 2"))
+        alert ("a soma dos valores é " + (valor1 + valor2))
+    }
+    
+    function ImparPar()
+    {
+        //2.Verifique se é impar ou par
+        numero = parseInt(prompt("digite um numero para ser verificado"))
+        if (numero % 2 == 0){alert ("o numero " + numero + " é PAR  ")}
+        else                { alert("o numero " + numero + " é IMPAR")}
+    }
+    function MaiorNumeroEntreDois()
+    {
+        //3.Escreva uma função que retorne o maior valor entre dois numeros
+        valor1 = document.getElementById("valor1").value
+        valor2 = document.getElementById("valor2").value
+        if      (valor1 > valor2){document.getElementByID("resultado").value = valor1}
+        else if (valor2 > valor1){document.getElementById("resultado").value = valor2}
+        else                     {alert("os valores são iguais")}
+    }
+    function Fibonacci()
+    {
+        //8..Crie uma função recursiva para calcular a posição que o usuárioescolherda sequência de Fibonacci
+        valor1 = document.getElementById("valor1").value
+ 
+        n0 = 0
+        n1 = 1
+        resultado = n0 + n1
+  
+        if (valor1 == 1) {
+            resultado = n0 
+        
+            } else if (valor1 == 2) {
+                   resultado = n1 
+        
+            } else if (valor1 >  2 ) {
+
+            for (let i = 0 ; i < valor1 - 2; i++) {
+                 resultado = n0 + n1
+                 n0 = n1
+                 n1 = resultado
+                 }
+            } else {
+                  alert ("valor invalido")
+            }
+        
+        document.getElementById("resultado").value = resultado
+    }
+    function SomaPares()  
+        {
+        //11.Crie uma função que receba um valor e retorne a soma dos números pares
+        // 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+        valor1 = document.getElementById("valor1").value
+
+             resultado = 0;
+             for(let i = 0; i <= valor1; i++)
+             {
+             if(i % 2 == 0) { resultado += i;}
+          // if(i % 2 != 0) { resultado += i;} se fosse para impar
+             } 
+        document.getElementById("resultado").value = resultado
+ 
+        }
+
+</script>
+</html>
